@@ -75,9 +75,9 @@ passport.deserializeUser(function (id, done) {
 passport.use(new GoogleStrategy({
     clientID:     process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    // callbackURL: "http://localhost:5000/auth/google/notes",
+    callbackURL: "http://localhost:5000/auth/google/notes",
     // callbackURL: "https://note-journal.herokuapp.com/auth/google/notes",
-    callbackURL: "https://morning-everglades-21513.herokuapp.com/auth/google/notejournal",
+    callbackURL: "https://morning-everglades-21513.herokuapp.com/auth/google/notes",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     passReqToCallback: true,
   },
@@ -104,7 +104,7 @@ app.route("/")
 app.get('/auth/google',
     passport.authenticate('google', { scope: ['profile', "email"] }));
 
-app.get("/auth/google/notejournal",
+app.get("/auth/google/notes",
     passport.authenticate('google', { failureRedirect: "/" }),
     function (req, res) {
         res.redirect("/notes");
