@@ -77,7 +77,7 @@ passport.use(new GoogleStrategy({
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     // callbackURL: "http://localhost:5000/auth/google/notes",
     // callbackURL: "https://note-journal.herokuapp.com/auth/google/notes",
-    callbackURL: "https://morning-everglades-21513.herokuapp.com/auth/google/notes",
+    callbackURL: "https://morning-everglades-21513.herokuapp.com/auth/google/notejournal",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     passReqToCallback: true,
   },
