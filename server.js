@@ -104,7 +104,7 @@ app.route("/")
 app.get('/auth/google',
     passport.authenticate('google', { scope: ['profile', "email"] }));
 
-app.get("/auth/google/notes",
+app.get("/auth/google/notejournal",
     passport.authenticate('google', { failureRedirect: "/" }),
     function (req, res) {
         res.redirect("/notes");
