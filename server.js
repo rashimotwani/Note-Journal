@@ -75,9 +75,9 @@ passport.deserializeUser(function (id, done) {
 passport.use(new GoogleStrategy({
     clientID:     process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    // callbackURL: "http://localhost:5000/auth/google/notes",
+    callbackURL: "http://localhost:5000/auth/google/notes",
     // callbackURL: "https://morning-everglades-21513.herokuapp.com/auth/google/notes",
-    callbackURL: "https://pacific-savannah-75315.herokuapp.com/auth/google/notes",
+    // callbackURL: "https://pacific-savannah-75315.herokuapp.com/auth/google/notes",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     passReqToCallback: true,
   },
