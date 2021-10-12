@@ -69,13 +69,21 @@ passport.deserializeUser(function (id, done) {
     });
 });
 
+let callbackURL;
+
+if(process.env.NODE_ENV===dev){
+  callbackURL="http://localhost:5000/auth/google/notes"
+}
+else{
+  callbackURL="https://glacial-eyrie-31902.herokuapp.com/auth/google/notes"
+}
 
 
 
 passport.use(new GoogleStrategy({
     clientID:     process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:5000/auth/google/notes",
+    callbackURL: callbackURL,
     // callbackURL: "https://notejournal.herokuapp.com/auth/google/notes",
     // callbackURL: "https://limitless-sands-05271.herokuapp.com/auth/google/notes",
     // callbackURL: "https://morning-everglades-21513.herokuapp.com/auth/google/notes",
