@@ -2,7 +2,7 @@
 ## Made-By : Rashi Motwani
 
 ### A place to store your notes safe and secure
-### Deployed on heroku : https://glacial-eyrie-31902.herokuapp.com/
+### [Website Link][https://glacial-eyrie-31902.herokuapp.com/]
 
 <img width="960" alt="Screenshot 2021-10-11 232659" src="https://user-images.githubusercontent.com/85797179/136834574-508a4bba-57cd-4e0f-93f8-eb2045ab136c.png">
 <img width="960" alt="Screenshot 2021-10-11 232628" src="https://user-images.githubusercontent.com/85797179/136834590-aa760867-090a-40e1-acf8-da3dcdca4941.png">
